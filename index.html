@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<!-- 
+  error messages
+  responsiveness
+ -->
+<body>
+  <main class="main-container">
+    <div class="input-boxes">
+      <div class="input-date-component day-box">
+        <label for="day" id="day-label">DAY</label>
+        <input type="number" id="day" min="1" max="31" placeholder="DD">
+        <div class="error-message" id="day-error-message"></div>
+      </div>
+      <div class="input-date-component month-box">
+        <label for="month" id="month-label">MONTH</label>
+        <input type="number" id="month" min="1" max="12" placeholder="MM">
+        <div class="error-message" id="month-error-message"></div>
+      </div>
+      <div class="input-date-component year-box">
+        <label for="year" id="year-label">YEAR</label>
+        <input type="number" id="year" min="100" required placeholder="YYYY">
+        <div class="error-message" id="year-error-message"></div>
+      </div>
+    </div>
+    <button class="icon-box" onclick="calculate()">
+      <img src="assets/images/icon-arrow.svg" alt="icon" class="icon">
+    </button>
+    <div class="output-container">
+      <div class="output output-years"><span class="result" id="output-years-value">--</span> years</div>
+      <div class="output output-months"><span class="result" id="output-months-value">--</span> months</div>
+      <div class="output output-days"><span class="result" id="output-days-value">--</span> days</div>
+    </div>
+  </main>
+</body>
+</html>

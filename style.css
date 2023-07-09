@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    font-family: poppins-regular;
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url(assets/fonts/Poppins-Bold.ttf)
+}
+@font-face {
+    font-family: poppins-bold-italic;
+    src: url(assets/fonts/Poppins-BoldItalic.ttf)
+}
+@font-face {
+    font-family: poppins-extra-bold;
+    src: url(assets/fonts/Poppins-ExtraBold.ttf)
+}
+@font-face {
+    font-family: poppins-extra-bold-italic;
+    src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf)
+}
+@font-face {
+    font-family: poppins-italic;
+    src: url(assets/fonts/Poppins-Italic.ttf)
+}
+@font-face {
+    font-family: poppins-regular;
+    src: url(assets/fonts/Poppins-Regular.ttf)
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-color: hsl(0, 0%, 86%);
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    height: 60vh;
+    width: 90vw;
+    background-color: white;
+    margin-top: 10vh;
+    border-radius: 20px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-boxes{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    padding: 7vh 0;
+    border-bottom: 2px solid hsl(0, 0%, 86%);
+}
+
+.input-date-component {
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    color: hsl(0, 1%, 44%);
+    font-family: poppins-bold;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+}
+
+input{
+    width: 24vw;
+    height: 6vh;
+    padding-left: 3vw;
+    margin-top: 1vw;
+    color: hsl(0, 0%, 8%);
+    font-size: 1.25rem;
+    font-family: poppins-extra-bold;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 10px;
+}
+
+input:hover{
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid hsl(259, 100%, 65%);
+}
+
+button {
+    position: relative;
+    top: -8vw;
+    width: 16vw;
+    height: 16vw;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box:hover {
+    cursor: pointer;
+    background-color: hsl(0, 0%, 8%);
+}
+
+.icon {
+    width: 45%;
+}
+
+.output {
+    font-family: poppins-extra-bold-italic;
+    color: hsl(0, 0%, 8%);
+    font-size: 3.5rem;
+    line-height: 4rem;
+}
+
+.result {
+    font-family: poppins-extra-bold-italic;
+    color: hsl(259, 100%, 65%);
+}
+
+.invalid-label {
+    color: hsl(0, 100%, 67%);
+}
+
+.invalid-input {
+    outline: none;
+    border: 1px solid hsl(0, 100%, 67%);
+    color: hsl(0, 100%, 67%);
+}
+
+.error-message {
+    width: 24vw;
+    color: hsl(0, 100%, 67%);
+    font-family: poppins-italic;
+    font-size: 0.45rem;
+}
+
+@media (min-width: 576px) {
+    body {
+        align-items: center;
+    }
+    .main-container {
+        height: 60vh;
+        width: 35vw;
+        margin-top: 0vh;
+    }
+
+    label{
+        font-size: 1rem;
+    }
+
+    .error-message {
+        width: 8vw;
+        color: hsl(0, 100%, 67%);
+        font-family: poppins-italic;
+        font-size: 0.75rem;
+    }
+
+    input{
+        width: 6vw;
+        height: 6vh;
+        padding-left: 1vw;
+        margin-top: 1vh;
+        color: hsl(0, 0%, 8%);
+        font-size: 1.25rem;
+        font-family: poppins-extra-bold;
+        border: 1px solid hsl(0, 0%, 86%);
+        border-radius: 10px;
+    }
+
+    .input-boxes{
+        justify-content: start;
+        padding: 5vh 0;
+    }
+
+    .icon{
+        width: 60%;
+    }
+    button {
+        top: -2vw;
+        left: 14vw;
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .output-container {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        margin-left: 2vw;
+        margin-bottom: 1vw;
+    }
+
+    .output {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+}
